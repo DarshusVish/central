@@ -1,0 +1,4 @@
+d2 = {"Vishal":"Darshana", "Vishu":"Darshu","Billianoire":"VISHAL","Manu":"Dell"}
+
+print("Enter the word to know the meaning:")
+x = input()
