@@ -1,0 +1,22 @@
+print("Enter the 1st Number")
+x = input()
+
+print("Enter the 2nd Number")
+y = input()
+
+print("Give the operator")
+z = input()
+
+ch = x +z+y
+if ch == "45*3":
+    print("555")
+elif z == "+":
+    print(int(x) + int(y))
+elif z == "*":
+    print(int(x) * int(y))
+elif z == "-":
+    print(int(x) - int(y))
+elif z == "/":
+    print(int(x) / int(y))
+else:
+    print("Check your inputs ")
