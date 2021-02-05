@@ -1,0 +1,15 @@
+
+# Patter printing
+print("Enter the number of rows")
+n = int(input())
+print("Type 1 or 0")
+b = input()
+
+if b == "1":
+        for i in range (0 , n+1):
+            print("*" * i)
+elif b == "0":
+        for i in range (n,0 ,-1):
+            print("*" * i)
+else:
+        print("Invalid inputs")
