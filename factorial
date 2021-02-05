@@ -1,0 +1,26 @@
+# Factorial of number by iterative method
+# n! = n * n-1 * n-2 * n-3* ......1
+# n! = n - (n-1)!
+
+
+def fact(n):
+    f = 1
+    for i in range(n):
+        f = f * (i +1)
+    return f
+
+num = int(input("Enter the Number: "))
+
+print("Factorial of number is:",fact(num)) 
+
+# Factorial of number by recursive method
+
+def rfact(n):
+    if n==1:
+        return 1
+    else:
+        return n * rfact(n-1)
+
+num1 = int(input("Enter the Number: "))
+
+print("Factorial of number by using recusive method is:",rfact(num1))
