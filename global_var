@@ -1,0 +1,12 @@
+v = 10
+def vishal():
+    v = 20
+    def vish():
+        global v
+        v = 100
+    print("before calling vish function", v)
+    vish()
+    print("after calling vish function", v)
+
+vishal()
+print(v)
