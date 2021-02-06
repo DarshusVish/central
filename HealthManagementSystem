@@ -1,0 +1,46 @@
+
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+print("Management System")
+
+company = {1:"Apple",2:"Nokia", 3:"Samsung"}
+log = {1:"Exercise", 2:"Diet"}
+
+print("Select the company")
+for key,value in company.items():
+    print("Press",key,"for",value,"\n",end="")
+company_name = int(input())
+
+print("Selected Company: ",company_name)
+print("Press 1 for log")
+print("Press 2 for retrive")
+x = int(input())
+
+if x is 1:
+    for key,value in log.items():
+        print("Press",key,"to log",value,"\n",end="")
+    log_name = int(input())
+    print("Selcted Job",company[company_name])
+    f = open(company[company_name]+"_"+log[log_name]+".txt","a")
+    k="y"
+    while(k is not "n"):
+        print("Enter",log[log_name],"\n",end="")
+        mytxt = input()
+        f.write("["+str(getdate())+"]:"+mytxt+"\n")
+        k=input("Do you want to add more? Y / N")
+        continue
+    f.close()
+elif x is 2:
+    for key,value in log.items():
+        print("Press",key,"to retrive",value,"\n",end="")
+    log_name = int(input())
+    print(company[company_name],"_",log[log_name],"report:","\n",end="")
+    f = open(company[company_name]+"_"+log[log_name]+".txt")
+    con = f.readlines()
+    for line in con:
+        print(line,end="")
+    f.close()
+else:
+    print("invalid input")
