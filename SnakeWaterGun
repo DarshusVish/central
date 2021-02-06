@@ -1,0 +1,48 @@
+# F string
+
+# snake water gun
+
+import random
+c = 0;
+u = 0;
+
+go = "y"
+while(go is not "n"):
+    swg = [ "snake","water","gun" ]
+    ch = random.choice(swg)
+    print(ch)
+    print("Select your choice:\n S for Snake \n W for Water \n G for Gun")
+    ans = input("\n Enter:")
+    if (ans == "s")|(ans == "S"):
+        ck = "snake"
+    elif (ans == "w") | (ans == "W"):
+        ck = "water"
+    elif (ans == "g") | (ans == "G"):
+        ck = "gun"
+    else:
+        print("Invalid selection")
+
+    print(ck)
+    if (((ck == "snake") & (ch == "water")) | ((ck == "water") & (ch == "gun")) | ((ck == "gun") & (ch == "snake"))):
+        print("You Won part of match")
+        u += 1
+
+    elif(((ch == "snake") & (ck == "water")) | ((ch == "water") & (ck == "gun")) | ((ch == "gun") & (ck == "snake"))):
+        print("Computer Won part of match")
+        c +=1
+
+    else:
+        print("Tie")
+
+    go = input("Do you want to continue? Y / N: ")
+    continue
+
+
+if (u > c):
+    print("\n You won the match")
+elif(u == c):
+    print("\n Match Tie")
+else:
+    print("\n Computer won the match, Next time better luck")
+
+print("Thanks for playing game..!! Visit again")
